@@ -115,11 +115,11 @@ const processStandings = (matchup, standingsData, medianMatch, rosters) => {
 		}
 	}
 	// calculating median score for the week
-	//let medianScore;
-	//if(medianMatch == true){
-		//const numManagers = scoresArray.length;
-		//scoresArray = scoresArray.sort((a, b) => b - a).slice(numManagers / 2 - 1, numManagers / 2 + 1);
-		//medianScore = (scoresArray[0] + scoresArray[1]) / 2;
+	let medianScore;
+	if(medianMatch == true){
+		const numManagers = scoresArray.length;
+		scoresArray = scoresArray.sort((a, b) => b - a).slice(numManagers / 2 - 1, numManagers / 2 + 1);
+		medianScore = (scoresArray[0] + scoresArray[1]) / 2;
 	}
 
 	for(const matchupKey in matchups) {
